@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .para {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+      }
+      .para:empty {
+        background-color: red;
+      }
+      /* .para:focus {
+        background-color: rgb(25, 210, 99);
+      } */
+      input:focus {
+        background-color: rgb(189, 201, 27);
+      }
+      input:disabled {
+        border: 3px solid rgb(17, 17, 160);
+      }
+      input:enabled {
+        border: 3px solid rgb(229, 78, 78);
+      }
+      input:checked + span {
+        color: red;
+      }
+      :root {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="para"></p>
+    <p class="para"></p>
+    <p class="para">123</p>
+    <p class="para"></p>
+
+    <p>
+      <input type="text" />
+      <input type="text" />
+      <input type="text" disabled />
+      <input type="text" disabled />
+      <input type="text" />
+      <input type="text" />
+    </p>
+
+    <p>
+      <input type="checkbox" /> <span>文字</span> <input type="checkbox" />
+      <span>文字</span> <input type="checkbox" /> <span>文字</span>
+    </p>
+  </body>
+</html>
