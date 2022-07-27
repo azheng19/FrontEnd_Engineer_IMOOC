@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>过度的缓动效果</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box1 {
+        border: 1px solid #000;
+      }
+
+      .box1 p {
+        width: 60px;
+        height: 60px;
+        background-color: orange;
+        margin-bottom: 10px;
+        position: relative;
+        left: 0;
+        transition: left 5s linear 0s;
+      }
+
+      .box1 p:nth-child(2) {
+        transition-timing-function: cubic-bezier(0.46, -0.45, 0.76, 1.51);
+      }
+
+      .box1:hover p {
+        left: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+  </body>
+</html>
