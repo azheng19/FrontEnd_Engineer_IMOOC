@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var regexp1 = /^\d{3}-\d{4}-\d{3}$/;
+      var regexp2 = /^\w{3}-\w{4}-\w{3}$/;
+
+      var str1 = "444-5555-000";
+      var str2 = "abc-__ab-12$";
+
+      console.log(regexp1.test(str1));
+      console.log(regexp2.test(str2));
+    </script>
+  </body>
+</html>

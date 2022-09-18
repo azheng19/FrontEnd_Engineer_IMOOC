@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var regexp1 = /^1\d{10}$/;
+
+      var regexp2 = /^[a-zA-Z]\d+[a-zA-Z]/;
+      var str1 = "aaa123b";
+      console.log(regexp2.test(str1));
+
+      var regexp3 = /^www\.\w+\.com(\.cn)?$/;
+      var str2 = "www.abc.com";
+      var str3 = "www.abc.com.cn";
+      var str4 = "dbd";
+      console.log(regexp3.test(str2));
+      console.log(regexp3.test(str3));
+      console.log(regexp3.test(str4));
+    </script>
+  </body>
+</html>

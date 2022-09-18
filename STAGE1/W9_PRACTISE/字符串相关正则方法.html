@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var str = "abc123def456ghi789";
+
+      var regexp = /\d+/g;
+
+      var res1 = str.search(regexp);
+      console.log(res1);
+
+      var res2 = str.match(regexp);
+      console.log(res2);
+
+      var res3 = str.replace(/[a-z]+/g, "*");
+      console.log(res3);
+    </script>
+  </body>
+</html>

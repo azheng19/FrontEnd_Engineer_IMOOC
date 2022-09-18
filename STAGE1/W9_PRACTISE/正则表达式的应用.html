@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .warning {
+        color: red;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        请输入中文姓名：
+        <input type="text" id="nameField" />
+        <span class="warning" id="nameWarning">输入的姓名不合法</span>
+      </p>
+      <p>
+        请输入Email地址：
+        <input type="text" id="emailField" />
+        <span class="warning" id="emailWarning">输入的email不合法</span>
+      </p>
+    </div>
+    <script>
+      var nameField = document.getElementById("nameField");
+      var nameWarning = document.getElementById("nameWarning");
+
+      var emailField = document.getElementById("emailField");
+      var emailWarning = document.getElementById("emailWarning");
+
+      nameField.onblur = function () {
+        var name = nameField.value;
+        if (/^[\u4E00-\u9FA5]{2,4}$/.test(name)) {
+          nameWarning.style.display = "none";
+        } else {
+          nameWarning.style.display = "inline";
+        }
+      };
+
+      emailField.onblur = function () {
+        var email = emailField.value;
+        if (/^\w{2,}\@\w{2,}\.[a-z]{2,4}(\.[a-z]{2,4})?$/.test(email)) {
+          emailWarning.style.display = "none";
+        } else {
+          emailWarning.style.display = "inline";
+        }
+      };
+    </script>
+  </body>
+</html>
