@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function People(name, age, sex) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+      }
+
+      People.prototype.sayHello = function () {
+        console.log(
+          "你好，我是" + this.name + "，我今年" + this.age + "岁了。"
+        );
+      };
+      People.prototype.sleep = function () {
+        console.log(this.name + "开始睡觉了，zzzzz");
+      };
+
+      function Student(name, age, sex, school, studentNumber) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.school = school;
+        this.studentNumber = studentNumber;
+      }
+
+      Student.prototype = new People();
+
+      Student.prototype.study = function () {
+        console.log(this.name + "开始学习！");
+      };
+
+      Student.prototype.exam = function () {
+        console.log(this.name + "开始考试！");
+      };
+
+      var hanmeimei = new Student("韩梅梅", 9, "女", "中心小学", 100666);
+      hanmeimei.study();
+      hanmeimei.sayHello();
+      hanmeimei.sleep();
+    </script>
+  </body>
+</html>
