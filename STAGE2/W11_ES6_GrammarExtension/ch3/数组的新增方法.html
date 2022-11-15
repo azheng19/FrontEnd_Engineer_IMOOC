@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数组的新增方法</title>
+  </head>
+  <body>
+    <script>
+      // console.log([1, 2, 3].includes(2));
+      // console.log([1, 2, 3].includes("2"));
+
+      // console.log(Array.from("str"));
+      // const obj = {
+      //   0: "a",
+      //   1: "b",
+      //   length: 1,
+      // };
+      // console.log(Array.from(obj));
+
+      // console.log(Array.from("123").map((value) => value * 2));
+
+      const arr = [1, 5, 10, 15];
+      // console.log(
+      //   arr.find((value, index, arr) => {
+      //     // console.log(value, index, arr);
+      //     return value > 9;
+      //   })
+      // );
+      console.log(
+        arr.findIndex((value, index, arr) => {
+          // console.log(value, index, arr);
+          return value > 9;
+        })
+      );
+    </script>
+  </body>
+</html>

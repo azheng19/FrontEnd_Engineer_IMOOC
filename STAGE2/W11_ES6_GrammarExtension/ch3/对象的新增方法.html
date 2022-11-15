@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>对象的新增方法</title>
+  </head>
+  <body>
+    <script>
+      const apple = {
+        color: "red",
+        shape: "circle",
+        taste: "sweet",
+      };
+      const pen = {
+        color: "black",
+        shape: "cylinder",
+        use: "write",
+      };
+
+      console.log(Object.assign({}, apple, pen));
+      console.log(apple);
+      // console.log({ ...apple, ...pen } === apple);
+    </script>
+  </body>
+</html>

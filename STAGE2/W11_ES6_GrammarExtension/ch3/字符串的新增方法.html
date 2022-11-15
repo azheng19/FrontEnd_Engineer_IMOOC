@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>字符串的新增方法</title>
+  </head>
+  <body>
+    <script>
+      // console.log("abc".includes("a"));
+      // console.log("abc".includes("ba"));
+
+      // let url = "https://www.imooc.com/course/list";
+      // const addURLParam = (url, name, value) => {
+      //   url += url.includes("?") ? "&" : "?";
+      //   url += `${name}=${value}`;
+      //   return url;
+      // };
+
+      // url = addURLParam(url, "c", "fe");
+      // console.log(url);
+
+      // console.log("x".padStart(6, "ab"));
+      // console.log("xxx".padStart(2, "ab"));
+      // console.log("1".padStart(3, "01"));
+      const s = "  a b c  ";
+      console.log(s.trim());
+      console.log(s.trimStart());
+      console.log(s.trimEnd());
+    </script>
+  </body>
+</html>
